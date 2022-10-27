@@ -10,7 +10,7 @@ export const LoadImageAPI = async ({search, pg}) => {
         const result = await unsplash.search.getPhotos({
             query: search,
             page: pg,
-            perPage: 10,
+            perPage: 12,
         })
         // console.log("result", result.type)
         if(result.type === 'success') {

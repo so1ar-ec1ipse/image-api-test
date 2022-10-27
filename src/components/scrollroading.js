@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import LoadImageAPI from "../APIs/loadImage.api"
 const ScrollRoading = ({setImgList, imglist, children}) => {
     // const ref = useRef(null)
@@ -7,7 +7,7 @@ const ScrollRoading = ({setImgList, imglist, children}) => {
     useEffect(() => {
         console.log(Math.ceil(window.scrollY + window.innerHeight), ref.current.offsetHeight)
         window.addEventListener('scroll', handleScroll)
-    })
+    }, )
     const handleScroll = () => {
         if( // over scroll?
             Math.ceil(window.scrollY + window.innerHeight) < ref.current.offsetHeight 
